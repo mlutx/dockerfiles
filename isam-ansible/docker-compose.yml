@@ -1,0 +1,7 @@
+version: '2'
+services:
+  isam-ansible:
+    image: "mludocker/isam-ansible"
+    volumes:
+    - $PWD:/ansible/playbooks
+    command: -i inventories/demo demo.yml -vvv

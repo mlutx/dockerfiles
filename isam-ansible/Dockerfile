@@ -42,4 +42,4 @@ ENTRYPOINT ["ansible-playbook"]
 # Check out playbooks and inventories, then run the following command to start the playbook
 # docker run -it --rm -v <local directory to playbook>:/ansible/playbooks --name test mludocker/isam-ansible -i <inventory file> <playbook> -e "other environment variables" -vvv
 # for example:
-# docker run -it --rm -v $(pwd)/isam-ansible-playbook-sample:/ansible/playbooks  --name test mludocker/isam-ansible  -i inventories/test pdadmin.yml -vvv
+# docker run -it --rm -v $(pwd)/isam-ansible-playbook-sample:/ansible/playbooks  --name test mludocker/isam-ansible  -i inventories/demo demo.yml -vvv
