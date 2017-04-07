@@ -6,7 +6,7 @@ ENV container docker
 # Install OS pre-requisites
 RUN yum -y update; yum clean all
 RUN yum -y install epel-release; yum clean all
-RUN yum -y install unzip gcc curl openssl-devel openssh-client git python python-pip python-crypto python-devel; yum clean all
+RUN yum -y install unzip gcc curl openssl-devel openssh-client git python python-pip python-crypto python-ldap python-devel; yum clean all
 
 # Install/Update Python modules
 RUN pip install --upgrade pip requests ansible
