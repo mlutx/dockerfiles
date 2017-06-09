@@ -1,2 +1,6 @@
-docker tag $IMAGE_NAME $DOCKER_REPO:latest
-docker push $DOCKER_REPO:latest
+#!/bin/bash
+
+export TODAY=$(date "+%Y%m%d%H%M")
+
+docker tag $IMAGE_NAME $DOCKER_REPO:$TODAY
+docker push $DOCKER_REPO:$TODAY
