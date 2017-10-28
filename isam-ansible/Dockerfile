@@ -24,7 +24,7 @@ RUN mkdir -p /ansible/playbooks
 WORKDIR /ansible/playbooks
 
 # Prepare ISAM Ansible Common Roles 
-RUN ansible-galaxy install -c git+https://github.com/ibm-security/isam-ansible-roles.git 
+RUN ansible-galaxy install -p /etc/ansible/roles -c git+https://github.com/ibm-security/isam-ansible-roles.git 
 
 ENV ANSIBLE_GATHERING smart
 ENV ANSIBLE_HOST_KEY_CHECKING false
